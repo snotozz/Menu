@@ -2,21 +2,83 @@ import Category from '../models/category';
 import Meal from '../models/meal';
 
 export const CATEGORIES = [
-  new Category('c1', 'Italian', '#f5428d'),
-  new Category('c2', 'Quick & Easy', '#f54242'),
-  new Category('c3', 'Hamburgers', '#f5a442'),
-  new Category('c4', 'German', '#f5d142'),
-  new Category('c5', 'Light & Lovely', '#368dff'),
-  new Category('c6', 'Exotic', '#41d95d'),
-  new Category('c7', 'Breakfast', '#9eecff'),
-  new Category('c8', 'Asian', '#b9ffb0'),
-  new Category('c9', 'French', '#ffc7ff'),
-  new Category('c10', 'Summer', '#47fced')
+  new Category('c1', 'Italiana', '#FFE6F1'),
+  new Category('c2', 'Fácil y Rápido', '#FFD6E8'),
+  new Category('c3', 'Hamburguesas', '#FFC5DF'),
+  new Category('c4', 'Alemana', '#FFB8D8'),
+  new Category('c5', 'Ligero', '#FFAAD1'),
+  new Category('c6', 'Bebidas', '#FFA0CC'),
+  new Category('c7', 'Desayuno', '#FF8AC0'),
+  new Category('c8', 'Asiatica', '#FF7DB9'),
+  new Category('c9', 'Fracesa', '#FF62AA'),
+  new Category('c10', 'Veraniega', '#FF4FA0')
 ];
 
 export const MEALS = [
   new Meal(
     'm1',
+    ['c1', 'c2'],
+    'Ravioles',
+    'affordable',
+    'simple',
+    'https://cdn0.recetasgratis.net/es/posts/2/1/5/ravioles_22512_orig.jpg',
+    20,
+    [
+      '1 Salsa Hunts Receta Casera sabor Carne 680gr',
+      '1 kg de ravioles de espinaca con queso ricota',
+      '2 cucharaditas de aceite de oliva',
+      '1 taza de agua de cocción de la pasta',
+      'Queso parmesano rallado al gusto para servir',
+    
+    ],
+    [
+      'Cocina los ravioles según las instrucciones del empaque. Reserva.',
+      'Calienta el aceite de oliva en una olla y agrega la Salsa Hunts Receta Casera sabor Carne y el agua de cocción de la pasta. ',
+      'Rectifica la sazón y espera a que hierva. ',
+      'In the meantime, heaten up some olive oil and add the cut onion.',
+      'Sirve cada plato con los ravioles calientes, baña con salsa y acompaña con el queso parmesano.',
+    ],
+    false,
+    true,
+    true,
+    true
+    
+  ),
+
+  new Meal(
+    'm22',
+    ['c1', 'c2'],
+    'Pizza',
+    'affordable',
+    'simple',
+    'https://myplate-prod.azureedge.us/sites/default/files/styles/recipe_525_x_350_/public/2022-08/QuickAndEasyPizza_527x323.jpg?itok=MR3STXhe',
+    20,
+    [
+      '2 tazas de harina para todo uso (dividida por la mitad)',
+      '1 cucharada de levadura instantánea',
+      '1 cucharada de azúcar',
+      '2/3 taza de agua tibia + 2 cucharadas (110-115 grados F)',
+      '2 rociadas de aceite en aerosol antiadherente',
+      '2 rociadas de aceite en aerosol antiadherente',
+      '6 onzas de queso mozzarella semidescremado, rallado (1 1/2 tazas)'
+    
+    ],
+    [
+      'Precaliente el horno a 375 grados F.',
+      'Reúna, triture y mida todos los ingredientes antes de comenzar a preparar la receta.',
+      'En un tazón mediano, mezcle con una cuchara 1 taza de harina, levadura, azúcar y agua.',
+      'Agregue gradualmente la otra taza de harina hasta que la mezcla forme una bola.',
+      'Espolvoree una tabla de cortar o limpie la superficie donde va a preparar la masa con harina. Coloque la bola de masa en la superficie, luego use sus manos limpias para amasar la masa en la superficie durante unos 5 minutos.',
+    ],
+    false,
+    true,
+    true,
+    true
+    
+  ),
+  
+  new Meal(
+    'm33',
     ['c1', 'c2'],
     'Spaghetti with Tomato Sauce',
     'affordable',
@@ -44,6 +106,7 @@ export const MEALS = [
     true,
     true,
     true
+    
   ),
 
   new Meal(
@@ -71,6 +134,7 @@ export const MEALS = [
     false,
     false,
     false
+
   ),
 
   new Meal(
@@ -95,6 +159,75 @@ export const MEALS = [
       'Quickly fry the buns for c. 1 minute on each side',
       'Bruch buns with ketchup',
       'Serve burger with tomato, cucumber and onion'
+    ],
+    false,
+    false,
+    false,
+    true
+  ),
+  new Meal(
+    'm44',
+    ['c3'],
+    'Hamburguesa',
+    'pricey',
+    'simple',
+    'https://sabrosano.com/wp-content/uploads/2020/05/Hambuerguesa-Casera_6.jpg',
+    45,
+    [
+      '500 gr de carne molida',
+      '50 gr de tocino picado',
+      '6 panes para hamburguesa',
+      '1 Cucharada de pan molido',
+      '1 Diente de ajo',
+      '6 Rebanadas de queso',
+      '1 Huevo',
+      '1/3 Cebolla blanca',
+      '6 Hojas de lechuga',
+      '1 Tomate en rodajas',
+      'Sal y pimienta al gusto',
+      '1 Cucharada de Aceite Sabrosano'
+      
+    ],
+    [
+      'Form 2 patties',
+      'Fry the patties for c. 4 minutes on each side',
+      'Quickly fry the buns for c. 1 minute on each side',
+      'Bruch buns with ketchup',
+      'Serve burger with tomato, cucumber and onion'
+    ],
+    false,
+    false,
+    false,
+    true
+  ),
+  new Meal(
+    'm55',
+    ['c3'],
+    'Hamburguesa con huevo',
+    'pricey',
+    'simple',
+    'https://i.blogs.es/2158e9/hamburguesa/1366_2000.jpg',
+    45,
+    [
+      'Carne picada de ternera 180 g',
+      'Yema de huevo (opcional) 1',
+      'Bacon 2',
+      'Lechuga al gusto',
+      'Tomate al gusto',
+      'Queso que funda bien (cheddar, havarti, emmental...)',
+      'Mostaza de Dijon o kétchup o mayonesa u otra salsa',
+      'Panecillo de hamburguesa tierno',
+      'Pimienta negra molida',
+      'Sal',
+      'Mantequilla para tostar el pan',
+      'Aceite de oliva virgen extra'
+      
+      
+    ],
+    [
+      'Pedir la carne picada al momento en carnicería, o picar en casa adecuadamente, dejando una buena textura. Se puede mezclar la carne de ternera con un poco de cerdo. Añadir la yema de huevo opcional y un poco de beicon muy picado, salpimentar, mezclar y formar la hamburguesa.',
+      'Cortar el pan por la mitad, untar con mantequilla por dentro y tostar ligeramente a la plancha. Colocar una base de lechuga u otras hojas verdes, y una o varias rodajas de tomate.',
+      'Calentar a fuego medio-fuerte la plancha, untar ligeramente con aceite la hamburguesa reposada y cocinar sin tocar durante 2-3 minutos. Dar la vuelta, poner una loncha o más de queso, y cocinar unos 3-4 minutos más. Retirar y disponer sobre el tomate. Añadir más beicon u otros complementos (pepinillos, cebolla caramelizada...), untar con la salsa elegida la parte superior del pan y cerrar.'
     ],
     false,
     false,
@@ -170,29 +303,41 @@ export const MEALS = [
   new Meal(
     'm6',
     ['c6', 'c10'],
-    'Delicious Orange Mousse',
+    'Negroni',
     'affordable',
     'hard',
-    'https://cdn.pixabay.com/photo/2017/05/01/05/18/pastry-2274750_1280.jpg',
+    'https://www.thespruceeats.com/thmb/uiC0MCgm-wncN3TvF_EFM0bWKCk=/6000x4000/filters:fill(auto,1)/negroni-cocktail-recipe-759327-6-5b3f965b46e0fb00364f8d61.jpg',
     240,
     [
-      '4 Sheets of Gelatine',
-      '150ml Orange Juice',
-      '80g Sugar',
-      '300g Yoghurt',
-      '200g Cream',
-      'Orange Peel'
+      '300 ml de Campari',
+      '300 ml de vermú rojo',
+      '300 ml de ginebra', 
+      'naranja'
     ],
     [
-      'Dissolve gelatine in pot',
-      'Add orange juice and sugar',
-      'Take pot off the stove',
-      'Add 2 tablespoons of yoghurt',
-      'Stir gelatin under remaining yoghurt',
-      'Cool everything down in the refrigerator',
-      'Whip the cream and lift it under die orange mass',
-      'Cool down again for at least 4 hours',
-      'Serve with orange peel'
+      'El Negroni se sirve igual que el Americano, en hielo, preferiblemente en vaso bajo y ancho y con una cáscara de naranja. Aunque veáis en algunos sitios hacerlo con coctelera, es un cóctel que, tradicionalmente, se mezcla directamente en vaso. Para armarlo solo debemos llenar el vaso de hielo y, con ayuda de un jigger, verter una parte de Campari, una de vermú rojo y una de ginebra, de 30 cl cada una. Se remueve bien con una cuchara y se termina con un twist de naranja.'
+    ],
+    true,
+    false,
+    true,
+    false
+  ),
+  new Meal(
+    'm222',
+    ['c6', 'c10'],
+    'Tom Collins',
+    'affordable',
+    'hard',
+    'https://flavorfix.com/wp-content/uploads/2022/02/tom-collins-recipe-for-cocktail.jpeg',
+    240,
+    [
+      '300 ml de Campari',
+      '300 ml de vermú rojo',
+      '300 ml de ginebra', 
+      'naranja'
+    ],
+    [
+      'El Negroni se sirve igual que el Americano, en hielo, preferiblemente en vaso bajo y ancho y con una cáscara de naranja. Aunque veáis en algunos sitios hacerlo con coctelera, es un cóctel que, tradicionalmente, se mezcla directamente en vaso. Para armarlo solo debemos llenar el vaso de hielo y, con ayuda de un jigger, verter una parte de Campari, una de vermú rojo y una de ginebra, de 30 cl cada una. Se remueve bien con una cuchara y se termina con un twist de naranja.'
     ],
     true,
     false,
